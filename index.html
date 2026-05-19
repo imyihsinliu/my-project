@@ -225,6 +225,11 @@
                 return () => window.removeEventListener('scroll', handleScroll);
             }, []);
 
+            // Dynamic browser page title update based on selected variant
+            useEffect(() => {
+                document.title = `Vermicular MINI IH 琺瑯電子鑄鐵鍋(${selectedVariant.name}) | hengstyle 恆隆行官方線上購物`;
+            }, [selectedVariant]);
+
             // Cooking Timer Process
             useEffect(() => {
                 let interval;
@@ -544,8 +549,8 @@
                                     </div>
                                 </div>
 
-                                {/* THUMBNAILS LIST (主圖1、主圖2、附圖1到附圖8) */}
-                                <div className="grid grid-cols-5 sm:grid-cols-10 gap-2">
+                                {/* THUMBNAILS LIST */}
+                                <div className="grid grid-cols-5 sm:grid-cols-12 gap-2">
                                     {realImages.map((img, idx) => (
                                         <button 
                                             key={img.id}
@@ -560,7 +565,7 @@
                                 <div className="flex items-center justify-between px-2 mt-2">
                                     <div className="flex items-center gap-1.5 text-xs text-neutral-400">
                                         <i className="fa-regular fa-image"></i>
-                                        <span>點擊上方縮圖切換松露黑產品細節與多款美味料理照片</span>
+                                        <span>點擊上方縮圖切換產品細節與多樣美味料理照片</span>
                                     </div>
                                     <div className="flex items-center gap-4 text-xs text-neutral-500 font-medium">
                                         <button className="hover:text-amber-700 flex items-center gap-1" onClick={() => triggerNotification("🔗 連結已複製到剪貼簿，隨時與好友分享吧！")}>
@@ -577,7 +582,7 @@
                             {/* RIGHT SIDE: PRODUCT CONFIGURATION & CART ACTIONS */}
                             <div className="lg:col-span-5 flex flex-col justify-start">
                                 
-                                {/* Brand and Titles */}
+                                {/* Brand and Dynamic Titles */}
                                 <div className="border-b border-neutral-200 pb-4 mb-4">
                                     <div className="flex justify-between items-start">
                                         <span className="text-sm font-black tracking-widest text-amber-700 uppercase">Vermicular (日本原裝)</span>
@@ -587,8 +592,9 @@
                                             <span className="text-neutral-400">(128評價)</span>
                                         </div>
                                     </div>
+                                    {/* DYNAMIC TITLE DEPENDENT ON STATE */}
                                     <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-neutral-900 mt-2 leading-relaxed">
-                                        Vermicular MINI IH 琺瑯電子鑄鐵鍋 (松露黑)
+                                        Vermicular MINI IH 琺瑯電子鑄鐵鍋 ({selectedVariant.name})
                                     </h1>
                                     <p className="text-xs text-neutral-400 mt-2">商品編號：9059821</p>
                                 </div>
@@ -914,7 +920,7 @@
                                         </div>
                                     </div>
 
-                                    {/* 新增特色細節大圖與產品海報插圖群組 */}
+                                    {/* 特色細節大圖與產品海報插圖群組 */}
                                     <div className="space-y-6">
                                         <div className="bg-white rounded-3xl overflow-hidden border border-neutral-100 shadow-md">
                                             <img src="GPT圖1.png" alt="商品特色介紹 1" className="w-full h-auto object-cover block" />
@@ -1139,7 +1145,7 @@
                     {/* MOBILE BOTTOM STICKY PANEL */}
                     <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-neutral-200 py-3 px-4 shadow-xl z-30 flex items-center justify-between">
                         <div className="flex flex-col">
-                            <span className="text-[10px] text-neutral-400">Vermicular MINI</span>
+                            <span className="text-[10px] text-neutral-400 font-bold">Vermicular MINI</span>
                             <span className="text-sm font-extrabold text-red-600">NT$ 21,500</span>
                         </div>
                         <div className="flex gap-2 w-2/3">
@@ -1151,7 +1157,7 @@
                             </button>
                             <button 
                                 onClick={() => { handleAddToCart(); setIsCartOpen(true); }}
-                                className="flex-1 bg-amber-800 text-white py-2.5 rounded-xl text-xs font-bold transition shadow-md">
+                                className="flex-1 bg-amber-880 text-white py-2.5 rounded-xl text-xs font-bold transition shadow-md">
                                 <span>立即結帳</span>
                             </button>
                         </div>
