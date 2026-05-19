@@ -998,52 +998,67 @@
                                 </div>
                             )}
 
-                            {/* TAB: SPECIFICATIONS */}
+                            {/* TAB: SPECIFICATIONS (UPDATED TO PERFECTLY MATCH UPLOADED IMAGE_161E8F.PNG) */}
                             {activeTab === 'spec' && (
                                 <div className="bg-white rounded-3xl p-8 border border-neutral-100 shadow-sm">
-                                    <h3 className="text-lg font-bold text-neutral-900 mb-6 border-b pb-3 flex items-center gap-2">
-                                        <i className="fa-solid fa-list-check text-amber-700"></i>
-                                        Vermicular MINI 規格詳解
-                                    </h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm">
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">品牌</span>
-                                            <span className="font-medium text-neutral-900">Vermicular (日本原裝總代理)</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">型號</span>
-                                            <span className="font-medium text-neutral-900">MINI IH 琺瑯電子鑄鐵鍋</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">鍋具內徑</span>
-                                            <span className="font-medium text-neutral-900">19 cm (適合 1~3 人精緻享用)</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">額定電壓</span>
-                                            <span className="font-medium text-neutral-900">110V 60Hz</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">額定功率</span>
-                                            <span className="font-medium text-neutral-900">1050 W (三維立體環繞立體受熱)</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">本體重量</span>
-                                            <span className="font-medium text-neutral-900">約 5.0 kg (鑄鐵內鍋 2.8kg + 加熱座 2.2kg)</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">機身尺寸</span>
-                                            <span className="font-medium text-neutral-900">寬 25.8 x 深 25.0 x 高 17.3 cm</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100">
-                                            <span className="text-neutral-500">產地</span>
-                                            <span className="font-medium text-neutral-900">日本 (Nagoya 名古屋全手工打造)</span>
-                                        </div>
-                                        <div className="flex justify-between py-3 border-b border-neutral-100 col-span-1 md:col-span-2">
-                                            <span className="text-neutral-500">包裝全配件</span>
-                                            <span className="font-medium text-neutral-900 text-right">
-                                                IH 智慧加熱座、19CM松露黑鑄鐵內鍋、專用上蓋支撐架、精緻量米杯/量水杯、原裝全彩食譜書(192頁)
-                                            </span>
-                                        </div>
+                                    <h3 className="text-xl font-bold text-neutral-900 mb-6">商品規格</h3>
+                                    <div className="overflow-x-auto">
+                                        <table className="w-full border-collapse border border-neutral-200 text-sm">
+                                            <tbody>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="w-1/4 bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">品牌</td>
+                                                    <td className="w-3/4 bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">Vermicular</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">容量</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">1~6人份</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">保固期</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal leading-relaxed">IH加熱器享3年保固 /恆隆行會員線上購物享【自動保固】服務</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">電壓</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">110V 60HZ</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">消耗功率</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">1050W</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">操作方式</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">觸控面板</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">顯示方式</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">LED</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">商品尺寸</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">W)25.8*(D)25.0*(H)17.3cm</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">火源模式</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal leading-relaxed">中火230℃、若火150℃、微火110℃、低溫調理30－95℃</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">電源線長度</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">1m</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">重量</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">5kg (鑄鐵內鍋2.8kg+加熱器2.2kg)</td>
+                                                </tr>
+                                                <tr className="border-b border-neutral-200">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">加熱方式</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal">IH(約)1000W~360W；加熱器(約)50W</td>
+                                                </tr>
+                                                <tr className="last:border-b-0">
+                                                    <td className="bg-[#f8f9fa] text-neutral-600 px-6 py-3.5 text-right border-r border-neutral-200 whitespace-nowrap font-normal">內容物</td>
+                                                    <td className="bg-white text-neutral-800 px-6 py-3.5 text-left font-normal leading-relaxed">包含IH加熱器乙個、19CM琺瑯鑄鐵鍋乙個、專用鍋蓋座乙個、專用量杯兩個、192頁專屬食譜書乙本</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             )}
@@ -1671,7 +1686,7 @@
                                         <div>
                                             <h3 className="text-lg font-bold text-neutral-900">🗓️ 門市實機體驗預約已完成！</h3>
                                             <p className="text-xs text-neutral-500 mt-1">
-                                                我們已為您預排專屬品牌大使為您一對一現場示範與解說。
+                                                我們已為您預排專屬 brand 大使為您一對一現場示範與解說。
                                             </p>
                                         </div>
 
