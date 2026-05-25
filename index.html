@@ -365,7 +365,7 @@
                 e.preventDefault();
                 playBeep('click');
                 if (!shippingName || !shippingPhone || !shippingAddress) {
-                    alert("請完整填寫收件人、聯絡電話與收件地址。");
+                    triggerNotification("⚠️ 請完整填寫收件人、聯絡電話與收件地址。");
                     return;
                 }
                 setCheckoutStep(2);
@@ -389,7 +389,7 @@
                 e.preventDefault();
                 playBeep('click');
                 if (!bookingName || !bookingPhone || !bookingDate) {
-                    alert("請填寫您的預約姓名、電話與預約體驗日期。");
+                    triggerNotification("⚠️ 請填寫您的預約姓名、電話與預約體驗日期。");
                     return;
                 }
                 setBookingSuccess(true);
@@ -920,6 +920,30 @@
                                         </div>
                                     </div>
 
+                                    {/* 1.5 PREMIUM VIDEO SHOWCASE (NATIVE UPLOADED VIDEO) */}
+                                    <div className="bg-white rounded-3xl p-6 md:p-10 border border-neutral-100 shadow-md">
+                                        <div className="text-center max-w-2xl mx-auto mb-8">
+                                            <span className="text-xs font-bold text-amber-700 tracking-wider uppercase block mb-2">Video Showcase</span>
+                                            <h3 className="text-xl md:text-2xl font-bold text-neutral-900 mb-3">
+                                                Vermicular 職人工藝與感官饗宴
+                                            </h3>
+                                            <p className="text-sm text-neutral-500 leading-relaxed">
+                                                感受日本名古屋手工鑄鐵工藝與極致控溫科技所帶來的烹調魔法。
+                                            </p>
+                                        </div>
+                                        <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-neutral-200 bg-black">
+                                            <video 
+                                                className="w-full h-full object-cover"
+                                                controls
+                                                playsInline
+                                                preload="metadata"
+                                            >
+                                                <source src="影片.mp4" type="video/mp4" />
+                                                您的瀏覽器不支援播放此影片格式。
+                                            </video>
+                                        </div>
+                                    </div>
+
                                     {/* 特色細節大圖與產品海報插圖群組 */}
                                     <div className="space-y-6">
                                         <div className="bg-white rounded-3xl overflow-hidden border border-neutral-100 shadow-md">
@@ -1172,7 +1196,7 @@
                             </button>
                             <button 
                                 onClick={() => { handleAddToCart(); setIsCartOpen(true); }}
-                                className="flex-1 bg-amber-880 text-white py-2.5 rounded-xl text-xs font-bold transition shadow-md">
+                                className="flex-1 bg-amber-800 text-white py-2.5 rounded-xl text-xs font-bold transition shadow-md">
                                 <span>立即結帳</span>
                             </button>
                         </div>
